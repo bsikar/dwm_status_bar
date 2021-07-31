@@ -38,7 +38,7 @@ fn get_status() -> CString {
     let date = chrono::Local::now().format("%a %b %e %T").to_string();
 
     CString::new(format!(
-        "ram: {:.2}% swap: {:.2}% cpu: {:.2}% vol: {}% {}",
+        "ram: {:.2}% swap: {:.2}% cpu: {:.2}% vol: {} {}",
         ram, swap, cpu, vol, date
     ))
     .unwrap()

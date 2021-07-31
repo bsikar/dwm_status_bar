@@ -1,5 +1,5 @@
 [package]
-name = "dwm_status_bar"
+name = "dwmblocks"
 version = "0.1.0"
 edition = "2018"
 
