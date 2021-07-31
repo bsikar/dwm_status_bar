@@ -31,7 +31,7 @@ fn get_status() -> CString {
     let vol = String::from_utf8(
         Command::new("/bin/sh")
             .arg("-c")
-            .arg(include_str!("scripts/get_vol"))
+            .arg("amixer -D pulse sget Master | grep 'Left:' | awk -F'[][]' '{ print $2 }'")
             .output()
             .expect("failed to get vol")
             .stdout,
