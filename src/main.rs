@@ -29,7 +29,9 @@ fn get_status() -> CString {
     let swap = (sys.used_swap() as f32 / sys.total_swap() as f32) * 100.;
     let cpu = sys.global_processor_info().cpu_usage();
     let vol = String::from_utf8(
-        Command::new("./scripts/get_vol")
+        Command::new("/bin/sh")
+            .arg("-c")
+            .arg(include_str!("scripts/get_vol"))
             .output()
             .expect("failed to get vol")
             .stdout,
