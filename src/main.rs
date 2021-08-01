@@ -37,7 +37,7 @@ fn get_status() -> CString {
             .stdout,
     )
     .expect("failed to get utf-8 from vol output");
-    let date = chrono::Local::now().format("%a %b %e %T").to_string();
+    let date = chrono::Local::now().format("%a %b %e %r").to_string();
 
     CString::new(format!(
         "ram: {:.2}% swap: {:.2}% cpu: {:.2}% vol: {} {}",
