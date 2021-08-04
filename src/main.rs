@@ -18,7 +18,7 @@ fn main() {
                 get_status().as_ptr() as *mut c_char,
             );
             XSync(display, False);
-            sleep(Duration::from_secs(1));
+            sleep(Duration::from_millis(50));
         }
     }
 }
