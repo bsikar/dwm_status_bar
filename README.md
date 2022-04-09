@@ -1,2 +1,2 @@
-# dwm_status_bar
+# dwmblocks
 A simple rust status bar for dwm
